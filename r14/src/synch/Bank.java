@@ -33,9 +33,9 @@ public class Bank
             System.out.printf(" Saldo ogólne: %10.2f%n", getTotalBalance());
             sufficientFunds.signalAll();
         }
-//        finally
+        finally
         {
-//            bankLock.unlock();
+            bankLock.unlock();
         }
     }
 

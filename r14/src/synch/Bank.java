@@ -21,12 +21,12 @@ public class Bank
 
     public void transfer(int from, int to, double amount) throws InterruptedException
     {
+        System.out.print("Blokada " + Thread.currentThread());
         bankLock.lock();
         try
         {
             while (accounts[from] < amount)
                 sufficientFunds.await();
-            System.out.print(Thread.currentThread());
             accounts[from] -= amount;
             System.out.printf(" %10.2f z %dd na %d", amount, from, to);
             accounts[to] += amount;

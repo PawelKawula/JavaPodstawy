@@ -1,7 +1,5 @@
 package synch;
 
-import unsynch.Bank;
-
 public class SynchBankTest
 {
     public static final int NACCOUNTS = 100;

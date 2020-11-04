@@ -31,7 +31,7 @@ class BounceFrame extends JFrame
         addButton(buttonPanel, "Start", event -> addBall());
         addButton(buttonPanel, "Close", event -> System.exit(0));
         add(buttonPanel, BorderLayout.SOUTH);
-        pack();
+
     }
 
     public void addButton(Container c, String title, ActionListener listener)
